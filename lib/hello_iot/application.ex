@@ -16,6 +16,7 @@ defmodule HelloIot.Application do
         # Children for all targets
         # Starts a worker by calling: HelloIot.Worker.start_link(arg)
         # {HelloIot.Worker, arg},
+        Azure.CognitiveServices.TextToSpeech.AccessTokenAgent
       ] ++ children(target())
 
     Supervisor.start_link(children, opts)
